@@ -1,0 +1,154 @@
+<mxfile host="app.diagrams.net" agent="Copilot CLI" version="24.0.0">
+  <diagram name="Conference feature architecture" id="conference-ngrx-architecture">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1220" pageHeight="860" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="Conference feature - client-side architecture (component / store / signal store / cross-frame / service)" style="text;html=1;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="4" width="1180" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Components row -->
+        <mxCell id="c-banner" value="&lt;b&gt;ConferenceBannerComponent&lt;/b&gt;&lt;br&gt;shows ongoing session,&lt;br&gt;start/end/present buttons" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="20" y="42" width="270" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="c-toolbar" value="&lt;b&gt;ConferenceToolbarActionsComponent&lt;/b&gt;&lt;br&gt;/ &quot;Conference&quot; right-click menu&lt;br&gt;Add / Move / Remove entry points" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="310" y="42" width="270" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="c-dropdown" value="&lt;b&gt;ConferenceSessionDropdownComponent&lt;/b&gt;&lt;br&gt;/ ConferenceFormComponent&lt;br&gt;choose / display a session" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="600" y="42" width="270" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="c-dialog" value="&lt;b&gt;BaseConferenceUpdateDialogComponent&lt;/b&gt;&lt;br&gt;Add / Move / Remove dialog&lt;br&gt;(shared base, per-action subclass: Move/Remove read the signal store)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="890" y="42" width="300" height="66" as="geometry" />
+        </mxCell>
+
+        <!-- Lane backgrounds -->
+        <mxCell id="laneA" value="Lane A - classic NgRx store (feature key &quot;conference&quot;)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#b3b3b3;dashed=1;verticalAlign=top;align=left;spacingLeft=8;spacingTop=6;fontSize=12;fontStyle=1;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="10" y="122" width="390" height="398" as="geometry" />
+        </mxCell>
+        <mxCell id="laneB" value="Lane B - Signal Store" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#b3b3b3;dashed=1;verticalAlign=top;align=left;spacingLeft=8;spacingTop=6;fontSize=12;fontStyle=1;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="410" y="122" width="230" height="398" as="geometry" />
+        </mxCell>
+        <mxCell id="laneC" value="Lane C - cross-frame common-service triad (List Area / Task Area / Image Area)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#b3b3b3;dashed=1;verticalAlign=top;align=left;spacingLeft=8;spacingTop=6;fontSize=12;fontStyle=1;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="660" y="122" width="530" height="398" as="geometry" />
+        </mxCell>
+
+        <!-- Lane A -->
+        <mxCell id="s-actions" value="&lt;b&gt;conference.action.ts&lt;/b&gt;&lt;br&gt;loadConferenceList / loadRecentlyUsedList / updateConferenceTaskList / reInitConferenceQueryList" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="30" y="164" width="340" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="s-effects" value="&lt;b&gt;ConferenceEffects / ConferenceListEffects&lt;/b&gt;&lt;br&gt;call ConferenceService, map success/fail to actions;&lt;br&gt;refresh list once dialog closed" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="30" y="222" width="340" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="s-reducer" value="&lt;b&gt;conference.reducer.ts&lt;/b&gt;&lt;br&gt;conferenceList, loaded, recentlyUsedList(+loading)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="30" y="294" width="340" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="s-selectors" value="&lt;b&gt;conference.selectors.ts&lt;/b&gt;&lt;br&gt;getConferenceListWithRecentlyUsed, isLoaded, ..." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="30" y="352" width="340" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="s-note" value="Only the AO conference list and the &quot;recently used conferences&quot; list go through this classic reducer loop." style="text;html=1;align=center;verticalAlign=top;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="400" width="340" height="46" as="geometry" />
+        </mxCell>
+
+        <!-- Lane B -->
+        <mxCell id="sig-store" value="&lt;b&gt;ConferenceSignalStore&lt;/b&gt;&lt;br&gt;(@ngrx/signals, providedIn root)&lt;br&gt;currentConferenceId&lt;br&gt;currentConferenceTitle&lt;br&gt;currentSession&lt;br&gt;sessionDetail&lt;br&gt;computed: currentSessionId&lt;br&gt;read directly via signals(), no Store.select needed" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="425" y="164" width="200" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="sig-note" value="Transient &quot;which conference / session is open now&quot; context; not persisted in the store timeline." style="text;html=1;align=center;verticalAlign=top;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="425" y="320" width="200" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Lane C -->
+        <mxCell id="x-common" value="&lt;b&gt;ConferenceSessionsCommonService  /  ConferenceUpdateCommonService&lt;/b&gt;&lt;br&gt;(interface injected by components; frame-specific impl bound by ConferenceModule.forLA()/forTA()/forIA())" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="680" y="164" width="490" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="x-single" value="&lt;b&gt;...SingleService&lt;/b&gt;&lt;br&gt;single-frame app:&lt;br&gt;delegates straight to Center/Data" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="695" y="228" width="140" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="x-view" value="&lt;b&gt;...ViewService&lt;/b&gt;&lt;br&gt;owner frame (e.g. Task Area)&lt;br&gt;holds/exposes the real state" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="855" y="228" width="140" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="x-proxy" value="&lt;b&gt;...ProxyService&lt;/b&gt;&lt;br&gt;other frames (List/Image Area)&lt;br&gt;forward reads/commands via RPC" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1015" y="228" width="140" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="x-center" value="&lt;b&gt;ConferenceSessionsCenterService / ConferenceUpdateDataService&lt;/b&gt;&lt;br&gt;single source of truth: RxJS BehaviorSubjects/Subjects (active session UI,&lt;br&gt;start/end session, dialog + menu data); both also read ConferenceSignalStore&lt;br&gt;and Store selectors (listSearchArea, conference.selectors.ts) where needed&lt;br&gt;&lt;br&gt;Kept outside the NgRx store on purpose: each browser frame is a separate&lt;br&gt;Angular app instance/store, so cross-frame state is synchronised via this&lt;br&gt;proxy/RPC layer instead of Store selectors." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="720" y="342" width="380" height="150" as="geometry" />
+        </mxCell>
+
+        <!-- ConferenceService / backend -->
+        <mxCell id="svc-conference" value="&lt;b&gt;ConferenceService  /  ConferenceServerService&lt;/b&gt;&lt;br&gt;FHIR + GraphQL calls; the only place that dispatches into the store&lt;br&gt;(updateConferenceTaskListAction, reInitConferenceQueryListAction)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="360" y="546" width="500" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="svc-backend" value="&lt;b&gt;Backend:&lt;/b&gt; FHIR AppointmentResourceProvider ($addStudiesToConference / $moveStudiesToConference /&lt;br&gt;$removeStudiesFromConference / session start-end) + GraphQL discussion-task list queries&lt;br&gt;See &quot;Move studies...&quot; / &quot;Remove studies...&quot; sections above for this side's decision logic." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="260" y="622" width="700" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Legend / note -->
+        <mxCell id="note" value="&lt;b&gt;Note / scope of this diagram&lt;/b&gt;&lt;br&gt;The Conference feature intentionally mixes three state-management styles rather than a single NgRx store: a classic&lt;br&gt;actions/reducer/effects/selectors slice for the two lists that are naturally shared and cacheable (Lane A); a lightweight&lt;br&gt;@ngrx/signals store for transient &quot;current session/conference&quot; context that changes too often to justify reducer actions (Lane B);&lt;br&gt;and a custom single/view/proxy cross-frame layer (Lane C) for session/dialog state that must stay consistent across the&lt;br&gt;List Area, Task Area and Image Area frames, which are separate Angular app instances and therefore cannot share one NgRx store." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#b3b3b3;align=left;spacingLeft=10;spacingTop=6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="20" y="702" width="1170" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Edges: Lane A chain -->
+        <mxCell id="e-a1" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;" edge="1" parent="1" source="s-actions" target="s-effects">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-a2" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;" edge="1" parent="1" source="s-effects" target="s-reducer">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-a3" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;" edge="1" parent="1" source="s-reducer" target="s-selectors">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-a4" value="Store.select(...)" style="edgeStyle=orthogonalEdgeStyle;html=1;startArrow=block;endArrow=block;dashed=1;strokeColor=#82878c;fontSize=10;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="s-selectors" target="c-banner">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Edges: Lane B (only session-dropdown and move/remove dialogs use the signal store directly) -->
+        <mxCell id="e-b1" value="patchState()/signal reads (session dropdown only)" style="edgeStyle=orthogonalEdgeStyle;html=1;startArrow=block;endArrow=block;dashed=1;strokeColor=#82878c;fontSize=10;exitX=0.25;exitY=0;entryX=0.5;entryY=1;" edge="1" parent="1" source="sig-store" target="c-dropdown">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-b2" value="signal reads (move/remove dialogs only)" style="edgeStyle=orthogonalEdgeStyle;html=1;startArrow=block;endArrow=block;dashed=1;strokeColor=#82878c;fontSize=10;exitX=0.75;exitY=0;entryX=0.5;entryY=1;" edge="1" parent="1" source="sig-store" target="c-dialog">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Edges: Lane C -->
+        <mxCell id="e-c1" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;" edge="1" parent="1" source="x-common" target="x-single">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-c2" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;" edge="1" parent="1" source="x-common" target="x-view">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-c3" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;" edge="1" parent="1" source="x-common" target="x-proxy">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-c4" value="CrossFrameShareService (BroadcastChannel) / RPC" style="edgeStyle=orthogonalEdgeStyle;html=1;startArrow=block;endArrow=block;dashed=1;strokeColor=#82878c;fontSize=10;exitX=0.5;exitY=1;entryX=0.5;entryY=1;" edge="1" parent="1" source="x-view" target="x-proxy">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-c5" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;" edge="1" parent="1" source="x-single" target="x-center">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-c6" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;" edge="1" parent="1" source="x-view" target="x-center">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-c7" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;" edge="1" parent="1" source="x-proxy" target="x-center">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Convergence into ConferenceService -->
+        <mxCell id="e-d1" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;exitX=0.5;exitY=1;entryX=0.2;entryY=0;" edge="1" parent="1" source="s-selectors" target="svc-conference">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-d2" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="sig-store" target="svc-conference">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-d3" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;exitX=0.5;exitY=1;entryX=0.8;entryY=0;" edge="1" parent="1" source="x-center" target="svc-conference">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-d4" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;" edge="1" parent="1" source="svc-conference" target="svc-backend">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
