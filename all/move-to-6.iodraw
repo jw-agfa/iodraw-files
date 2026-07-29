@@ -106,7 +106,7 @@
         <mxCell id="plock" value="Lock the target conference session&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="760" y="1485" width="220" height="46" as="geometry" />
         </mxCell>
-        <mxCell id="term" value="Success/partial-success toast shown; each moved study now appears exactly once, in the target session" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" parent="1" vertex="1">
+        <mxCell id="term" value="Success/partial-success toast shown" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="320" y="1680" width="340" height="56" as="geometry" />
         </mxCell>
         <mxCell id="e0" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" parent="1" source="m1" target="m2" edge="1">
