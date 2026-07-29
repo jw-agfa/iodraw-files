@@ -149,7 +149,12 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="e17" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" parent="1" source="d6" target="dcombine1" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="500" y="840" />
+              <mxPoint x="770" y="840" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="em1" value="No (in-progress)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" parent="1" source="dmove" target="s1" edge="1">
           <mxGeometry relative="1" as="geometry" />
