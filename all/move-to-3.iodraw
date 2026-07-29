@@ -49,7 +49,7 @@
         <mxCell id="d6" value="remainCnt &amp;gt; 0 AND remainCnt &amp;lt; srcNeedToMoveTasks.size()?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="330" y="713" width="340" height="88" as="geometry" />
         </mxCell>
-        <mxCell id="err6" value="Error: &quot;N tasks left, but trying to add M new tasks&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" parent="1" vertex="1">
+        <mxCell id="err6" value="Error: &quot;N tasks left, but trying to add more than N&amp;nbsp; new tasks&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="780" y="734" width="240" height="46" as="geometry" />
         </mxCell>
         <mxCell id="noteCapacity" value="remainCnt is null when the target session has no configured capacity limit; the check above only fires when remainCnt &gt; 0." style="text;html=1;align=center;verticalAlign=middle;fontSize=10.5;fontStyle=2;fontColor=#555555;whiteSpace=wrap;" parent="1" vertex="1">
