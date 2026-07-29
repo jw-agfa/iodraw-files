@@ -145,11 +145,13 @@
         <mxCell id="e16" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" parent="1" source="d6" target="dmove" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e17" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" parent="1" source="d6" target="dcombine1" edge="1">
+        <mxCell id="e17" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" parent="1" edge="1">
           <mxGeometry relative="1" as="geometry">
+            <mxPoint x="500" y="799" as="sourcePoint" />
+            <mxPoint x="770" y="948" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="500" y="840" />
-              <mxPoint x="770" y="840" />
+              <mxPoint x="500" y="838" />
+              <mxPoint x="770" y="838" />
             </Array>
           </mxGeometry>
         </mxCell>
