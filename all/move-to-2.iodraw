@@ -8,10 +8,10 @@
           <mxGeometry x="20" y="-50" width="800" height="26" as="geometry" />
         </mxCell>
         <mxCell id="m1" value="Select study(ies) in the conference list, click &quot;Move to conference&quot; (banner or RMC &quot;Conference&quot; menu)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" parent="1" vertex="1">
-          <mxGeometry x="330" y="-30" width="340" height="42" as="geometry" />
+          <mxGeometry x="330" y="-58" width="340" height="42" as="geometry" />
         </mxCell>
         <mxCell id="m2" value="&quot;Move to conference&quot; dialog: pick the target conference session, add a comment, click &quot;Move&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" parent="1" vertex="1">
-          <mxGeometry x="330" y="70" width="340" height="42" as="geometry" />
+          <mxGeometry x="330" y="40" width="340" height="42" as="geometry" />
         </mxCell>
         <mxCell id="d5" value="Is the target conference session locked?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="360" y="150" width="280" height="80" as="geometry" />
