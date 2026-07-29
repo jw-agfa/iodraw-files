@@ -5,7 +5,7 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="title" value="Remove studies from a conference session" style="text;html=1;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;" parent="1" vertex="1">
-          <mxGeometry x="20" y="6" width="800" height="26" as="geometry" />
+          <mxGeometry x="110" y="6" width="800" height="26" as="geometry" />
         </mxCell>
         <mxCell id="r1" value="Select study(ies) in the conference list, click &quot;Remove from conference&quot; (banner or RMC &quot;Conference&quot; menu)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="330" y="40" width="340" height="42" as="geometry" />
