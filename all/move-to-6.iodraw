@@ -31,7 +31,7 @@
         <mxCell id="err1" value="Error: &quot;No permission to move to other session&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="760" y="310" width="260" height="46" as="geometry" />
         </mxCell>
-        <mxCell id="d2" value="Current user has &quot;add to conference&quot; permission on the TARGET conference? (checkAddToConferencePermission)" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" parent="1" vertex="1">
+        <mxCell id="d2" value="Current user has &quot;add to conference&quot; permission on the TARGET conference?&amp;nbsp;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="360" y="404" width="280" height="80" as="geometry" />
         </mxCell>
         <mxCell id="err2" value="Error: &quot;No permission to add to conference&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" parent="1" vertex="1">
