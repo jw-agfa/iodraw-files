@@ -56,7 +56,7 @@
           <mxGeometry x="60" y="846" width="480" height="20" as="geometry" />
         </mxCell>
         <mxCell id="labelCombine" value="&quot;To combine&quot; set - combineDiscussionTasks" style="text;html=1;align=left;verticalAlign=middle;fontSize=11.5;fontStyle=1;" parent="1" vertex="1">
-          <mxGeometry x="770" y="840" width="480" height="20" as="geometry" />
+          <mxGeometry x="780" y="840" width="480" height="20" as="geometry" />
         </mxCell>
         <mxCell id="dmove" value="Is source task (A) completed?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="150" y="876" width="240" height="72" as="geometry" />
