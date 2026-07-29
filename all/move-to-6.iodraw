@@ -56,7 +56,7 @@
           <mxGeometry x="300" y="806" width="440" height="30" as="geometry" />
         </mxCell>
         <mxCell id="labelMove" value="&quot;To move&quot; set - moveDiscussionTasks&amp;nbsp;" style="text;html=1;align=left;verticalAlign=middle;fontSize=11.5;fontStyle=1;" parent="1" vertex="1">
-          <mxGeometry x="20" y="846" width="480" height="20" as="geometry" />
+          <mxGeometry x="20" y="846" width="220" height="20" as="geometry" />
         </mxCell>
         <mxCell id="labelCombine" value="&quot;To combine&quot; set - combineDiscussionTasks (study already has a task in the target)" style="text;html=1;align=left;verticalAlign=middle;fontSize=11.5;fontStyle=1;" parent="1" vertex="1">
           <mxGeometry x="540" y="846" width="480" height="20" as="geometry" />
