@@ -176,18 +176,16 @@
         <mxCell id="ec3" value="No (in-progress)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" parent="1" source="dcombine2" target="s2b" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ec4" value="Yes (completed)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" parent="1" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="790" y="1078" as="sourcePoint" />
-            <mxPoint x="730" y="1197" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="760" y="1078" />
-              <mxPoint x="760" y="1197" />
-            </Array>
-          </mxGeometry>
+        <mxCell id="ec4" value="Yes (completed)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" parent="1" source="dcombine2" target="s4b" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ec5" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" parent="1" source="s2as4a" target="combineFinish" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="655" y="1150" />
+              <mxPoint x="785" y="1150" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="ec6" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" parent="1" source="s2b" target="combineFinish" edge="1">
           <mxGeometry relative="1" as="geometry" />
