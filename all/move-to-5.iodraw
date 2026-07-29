@@ -205,10 +205,12 @@
         <mxCell id="e22" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" parent="1" source="d7" target="term" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e23" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" parent="1" source="plock" target="term" edge="1">
+        <mxCell id="e23" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" parent="1" edge="1">
           <mxGeometry relative="1" as="geometry">
+            <mxPoint x="990" y="1539.9999999999998" as="sourcePoint" />
+            <mxPoint x="749.9999999999998" y="1607" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="560" y="1509" />
+              <mxPoint x="750" y="1540" />
             </Array>
           </mxGeometry>
         </mxCell>
