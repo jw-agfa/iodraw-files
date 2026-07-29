@@ -20,10 +20,10 @@
           <mxGeometry x="790" y="170" width="200" height="40" as="geometry" />
         </mxCell>
         <mxCell id="err5a" value="&quot;Target session just got locked&quot; error" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" parent="1" vertex="1">
-          <mxGeometry x="700" y="276" width="150" height="46" as="geometry" />
+          <mxGeometry x="700" y="260" width="150" height="46" as="geometry" />
         </mxCell>
         <mxCell id="err5b" value="&quot;Target session locked, no tasks left&quot; error" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" parent="1" vertex="1">
-          <mxGeometry x="880" y="276" width="150" height="46" as="geometry" />
+          <mxGeometry x="880" y="260" width="150" height="46" as="geometry" />
         </mxCell>
         <mxCell id="d1" value="Current user is presenter/administrator of the SOURCE session?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="360" y="294" width="280" height="80" as="geometry" />
