@@ -70,7 +70,7 @@
         <mxCell id="pCleanup" value="cleanupStaleDuplicateTargets:&amp;nbsp; For every other completed sibling: reassign its snapshot onto the survivor and unlink it (logs a warning). If an additional in-progress sibling is found (business-invariant violation), only a warning is logged - it is left untouched and simply ignored by the merge below." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="540" y="926" width="480" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="s1" value="&amp;nbsp;(in-progress): reassignTasks moves the task directly into the target session - no new task created, its snapshot follows automatically" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" parent="1" vertex="1">
+        <mxCell id="s1" value="&amp;nbsp;in-progress: reassignTasks moves the task directly into the target session - no new task created, its snapshot follows automatically" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="20" y="968" width="220" height="86" as="geometry" />
         </mxCell>
         <mxCell id="s3" value="S3 (completed): createMultiDiscussionWorkflow creates a new discussion task in the target session; the old task&#39;s snapshot is reassigned onto the new task; the old task is unlinked from any session" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" parent="1" vertex="1">
