@@ -22,7 +22,7 @@
         <mxCell id="err5a" value="Error：&quot;Target session just got locked&quot; error" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="700" y="230" width="150" height="46" as="geometry" />
         </mxCell>
-        <mxCell id="err5b" value="&quot;Target session locked, no task slots left&quot; error" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" parent="1" vertex="1">
+        <mxCell id="err5b" value="Error: &quot;Target session locked, no task slots left&quot; error" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="880" y="230" width="150" height="46" as="geometry" />
         </mxCell>
         <mxCell id="d1" value="Current user is presenter/administrator of the SOURCE session?&amp;nbsp;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" parent="1" vertex="1">
