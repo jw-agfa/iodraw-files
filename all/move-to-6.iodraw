@@ -80,7 +80,7 @@
           <mxGeometry x="660" y="1054" width="240" height="72" as="geometry" />
         </mxCell>
         <mxCell id="moveFinish" value="For every resulting task : insert the conference comment; recompute status (NONE/PREPARED) from its snapshot count; set its conference-session link to the target session with that status.&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" parent="1" vertex="1">
-          <mxGeometry x="20" y="1130" width="480" height="80" as="geometry" />
+          <mxGeometry x="20" y="1168" width="480" height="80" as="geometry" />
         </mxCell>
         <mxCell id="s2as4a" value="target task B still in-progress: unlink source task A from its session; reassign snapshot A onto task B. Task B survives, now holding snapshot A (+ its own snapshot if any)." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="540" y="1158" width="230" height="94" as="geometry" />
