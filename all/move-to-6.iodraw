@@ -1,100 +1,213 @@
-<mxfile host="app.diagrams.net" agent="Copilot CLI" version="24.0.0">
+<mxfile host="www.iodraw.com" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36" version="24.7.17">
   <diagram name="Move studies to another conference session" id="move-to-conference">
-    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1360" pageHeight="1660" math="0" shadow="0">
+    <mxGraphModel dx="1050" dy="530" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1360" pageHeight="1660" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="title" value="Move studies to another conference session" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="20" y="6" width="800" height="26" as="geometry" /></mxCell>
-
-        <mxCell id="m1" value="Select study(ies) in the conference list, click &quot;Move to conference&quot; (banner or RMC &quot;Conference&quot; menu)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1"><mxGeometry x="330" y="40" width="340" height="42" as="geometry" /></mxCell>
-        <mxCell id="m2" value="&quot;Move to conference&quot; dialog: pick the target conference session, add a comment, click &quot;Move&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1"><mxGeometry x="330" y="112" width="340" height="42" as="geometry" /></mxCell>
-
-        <mxCell id="d5" value="Is the target conference session locked? (checkConferenceSessionLockStatus)" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" vertex="1" parent="1"><mxGeometry x="360" y="184" width="280" height="80" as="geometry" /></mxCell>
-        <mxCell id="d5b" value="Remaining count &gt; 0?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" vertex="1" parent="1"><mxGeometry x="790" y="204" width="200" height="40" as="geometry" /></mxCell>
-        <mxCell id="err5a" value="&quot;Target session just got locked&quot; error" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" vertex="1" parent="1"><mxGeometry x="700" y="276" width="150" height="46" as="geometry" /></mxCell>
-        <mxCell id="err5b" value="&quot;Target session locked, no tasks left&quot; error" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" vertex="1" parent="1"><mxGeometry x="880" y="276" width="150" height="46" as="geometry" /></mxCell>
-
-        <mxCell id="d1" value="Current user is presenter/administrator of the SOURCE session? (hasPermissionToUpdateOrDeleteSession)" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" vertex="1" parent="1"><mxGeometry x="360" y="294" width="280" height="80" as="geometry" /></mxCell>
-        <mxCell id="err1" value="Error: &quot;No permission to move to other session&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" vertex="1" parent="1"><mxGeometry x="760" y="310" width="260" height="46" as="geometry" /></mxCell>
-
-        <mxCell id="d2" value="Current user has &quot;add to conference&quot; permission on the TARGET conference? (checkAddToConferencePermission)" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" vertex="1" parent="1"><mxGeometry x="360" y="404" width="280" height="80" as="geometry" /></mxCell>
-        <mxCell id="err2" value="Error: &quot;No permission to add to conference&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" vertex="1" parent="1"><mxGeometry x="760" y="420" width="260" height="46" as="geometry" /></mxCell>
-
-        <mxCell id="d3" value="Selected studies still belong to the source session (no concurrent change by another user)? (isTasksBelongToSession)" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" vertex="1" parent="1"><mxGeometry x="360" y="514" width="280" height="80" as="geometry" /></mxCell>
-        <mxCell id="err3" value="Error: &quot;Session list changed&quot; - query list is refreshed" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" vertex="1" parent="1"><mxGeometry x="760" y="530" width="260" height="46" as="geometry" /></mxCell>
-
-        <mxCell id="pclass" value="getSrc2TgtTasksMap: for each selected source task, look up non-cancelled discussion task(s) for the same requested procedure (study) already on the target session. Split into srcNeedToMoveTasks (none found) and srcNeedToCombineTasks (found)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1"><mxGeometry x="300" y="624" width="440" height="70" as="geometry" /></mxCell>
-
-        <mxCell id="d6" value="remainCnt &gt; 0 AND remainCnt &lt; srcNeedToMoveTasks.size()? (only the &quot;to move&quot; net-new tasks count against capacity; combine never adds a task)" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" vertex="1" parent="1"><mxGeometry x="340" y="714" width="340" height="88" as="geometry" /></mxCell>
-        <mxCell id="err6" value="Error: &quot;N tasks left, but trying to add M new tasks&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" vertex="1" parent="1"><mxGeometry x="780" y="734" width="240" height="46" as="geometry" /></mxCell>
-        <mxCell id="noteCapacity" value="remainCnt is null when the target session has no configured capacity limit; the check above only fires when remainCnt &gt; 0." style="text;html=1;align=center;verticalAlign=middle;fontSize=10.5;fontStyle=2;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="300" y="806" width="440" height="30" as="geometry" /></mxCell>
-
-        <mxCell id="labelMove" value="&quot;To move&quot; set - moveDiscussionTasks (study not yet discussed in the target session)" style="text;html=1;align=left;verticalAlign=middle;fontSize=11.5;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="20" y="846" width="480" height="20" as="geometry" /></mxCell>
-        <mxCell id="labelCombine" value="&quot;To combine&quot; set - combineDiscussionTasks (study already has a task in the target)" style="text;html=1;align=left;verticalAlign=middle;fontSize=11.5;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="540" y="846" width="480" height="20" as="geometry" /></mxCell>
-
-        <mxCell id="dmove" value="Is source task (A) completed?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" vertex="1" parent="1"><mxGeometry x="150" y="876" width="240" height="72" as="geometry" /></mxCell>
-        <mxCell id="pSurvivor" value="Pick survivor: prefer the first in-progress target task for the same study (else the first, if all completed)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1"><mxGeometry x="540" y="876" width="480" height="40" as="geometry" /></mxCell>
-        <mxCell id="pCleanup" value="cleanupStaleDuplicateTargets: only runs when the target session unexpectedly holds more than one non-cancelled discussion task for this study (size &lt;= 1 -&gt; no-op, return). For every OTHER completed sibling: reassign its snapshot onto the survivor and unlink it (logs a warning). If an additional in-progress sibling is found (business-invariant violation), only a warning is logged - it is left untouched and simply ignored by the merge below." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1"><mxGeometry x="540" y="926" width="480" height="110" as="geometry" /></mxCell>
-
-        <mxCell id="s1" value="S1 (in-progress): reassignTasks moves the task directly into the target session - no new task created, its snapshot follows automatically" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1"><mxGeometry x="20" y="968" width="220" height="86" as="geometry" /></mxCell>
-        <mxCell id="s3" value="S3 (completed): createMultiDiscussionWorkflow creates a new discussion task in the target session; the old task's snapshot is reassigned onto the new task; the old task is unlinked from any session" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1"><mxGeometry x="260" y="968" width="240" height="86" as="geometry" /></mxCell>
-
-        <mxCell id="dcombine1" value="Is the surviving target task (B) completed?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" vertex="1" parent="1"><mxGeometry x="650" y="1046" width="240" height="72" as="geometry" /></mxCell>
-
-        <mxCell id="moveFinish" value="For every resulting task (S1 + S3): insert the conference comment; recompute status (NONE/PREPARED) from its snapshot count; set its conference-session link to the target session with that status. S1 tasks additionally have their workflow variables synced (syncTaskWorkflowVariables -&gt; updateDiscussionTask)." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1"><mxGeometry x="20" y="1078" width="480" height="80" as="geometry" /></mxCell>
-
-        <mxCell id="s2as4a" value="S2a / S4a (target task B still in-progress): unlink source task A from its session; reassign snapshot A onto task B. Task B survives, now holding snapshot A (+ its own snapshot if any)." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1"><mxGeometry x="540" y="1138" width="230" height="94" as="geometry" /></mxCell>
-        <mxCell id="dcombine2" value="Is source task (A) also completed?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" vertex="1" parent="1"><mxGeometry x="800" y="1138" width="230" height="80" as="geometry" /></mxCell>
-
-        <mxCell id="s2b" value="S2b (B completed, A in-progress): reassignTasks moves task A into the target session; snapshot B is reassigned onto task A; task B is unlinked. Task A survives; its workflow variables are synced." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1"><mxGeometry x="800" y="1248" width="230" height="98" as="geometry" /></mxCell>
-        <mxCell id="s4b" value="S4b (both A and B completed): unlink tasks A and B; createMultiDiscussionWorkflow creates a new task C in the target session; both snapshots are reassigned onto task C. Task C survives." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1"><mxGeometry x="1060" y="1248" width="230" height="98" as="geometry" /></mxCell>
-
-        <mxCell id="combineFinish" value="Insert the conference comment on the surviving task. After every &quot;to combine&quot; task is processed, batch-recompute status (NONE/PREPARED) for all surviving tasks from their snapshot counts (updateConferenceStatuses)." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1"><mxGeometry x="540" y="1366" width="750" height="70" as="geometry" /></mxCell>
-
-        <mxCell id="d7" value="Did this move consume the last remaining slot in the target session? (remainCnt &gt; 0 AND remainCnt &lt;= srcNeedToMoveTasks.size())" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" vertex="1" parent="1"><mxGeometry x="340" y="1466" width="320" height="84" as="geometry" /></mxCell>
-        <mxCell id="plock" value="Lock the target conference session (lockOrUnlockSession)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1"><mxGeometry x="800" y="1486" width="220" height="46" as="geometry" /></mxCell>
-        <mxCell id="term" value="Success/partial-success toast shown; each moved study now appears exactly once, in the target session" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1"><mxGeometry x="330" y="1576" width="340" height="56" as="geometry" /></mxCell>
-
-        <mxCell id="e0" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" edge="1" parent="1" source="m1" target="m2"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" edge="1" parent="1" source="m2" target="d5"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="e10" value="Yes" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" edge="1" parent="1" source="d5" target="d5b"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="e11" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" edge="1" parent="1" source="d5" target="d1"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="e12" value="Yes (still locked)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" edge="1" parent="1" source="d5b" target="err5a"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="e13" value="No" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" edge="1" parent="1" source="d5b" target="err5b"><mxGeometry relative="1" as="geometry" /></mxCell>
-
-        <mxCell id="e2" value="No" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" edge="1" parent="1" source="d1" target="err1"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" edge="1" parent="1" source="d1" target="d2"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="e4" value="No" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" edge="1" parent="1" source="d2" target="err2"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" edge="1" parent="1" source="d2" target="d3"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="e6" value="No" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" edge="1" parent="1" source="d3" target="err3"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" edge="1" parent="1" source="d3" target="pclass"><mxGeometry relative="1" as="geometry" /></mxCell>
-
-        <mxCell id="e14" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" edge="1" parent="1" source="pclass" target="d6"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="e15" value="Yes" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" edge="1" parent="1" source="d6" target="err6"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="e16" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" edge="1" parent="1" source="d6" target="dmove"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="e17" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" edge="1" parent="1" source="d6" target="pSurvivor"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="e17b" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" edge="1" parent="1" source="pSurvivor" target="pCleanup"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="e17c" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" edge="1" parent="1" source="pCleanup" target="dcombine1"><mxGeometry relative="1" as="geometry" /></mxCell>
-
-        <mxCell id="em1" value="No (in-progress)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" edge="1" parent="1" source="dmove" target="s1"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="em2" value="Yes (completed)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" edge="1" parent="1" source="dmove" target="s3"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="em3" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" edge="1" parent="1" source="s1" target="moveFinish"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="em4" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" edge="1" parent="1" source="s3" target="moveFinish"><mxGeometry relative="1" as="geometry" /></mxCell>
-
-        <mxCell id="ec1" value="No (in-progress)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dcombine1" target="s2as4a"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="ec2" value="Yes (completed)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dcombine1" target="dcombine2"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="ec3" value="No (in-progress)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dcombine2" target="s2b"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="ec4" value="Yes (completed)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dcombine2" target="s4b"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="ec5" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.15;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="s2as4a" target="combineFinish"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="ec6" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="s2b" target="combineFinish"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="ec7" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.85;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="s4b" target="combineFinish"><mxGeometry relative="1" as="geometry" /></mxCell>
-
-        <mxCell id="ef1" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" edge="1" parent="1" source="moveFinish" target="d7"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="ef2" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" edge="1" parent="1" source="combineFinish" target="d7"><mxGeometry relative="1" as="geometry" /></mxCell>
-
-        <mxCell id="e21" value="Yes" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="d7" target="plock"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="e22" value="No" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.35;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="d7" target="term"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="e23" value="then also succeeds" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.85;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="plock" target="term"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="title" value="Move studies to another conference session" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="20" y="6" width="800" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="m1" value="Select study(ies) in the conference list, click &quot;Move to conference&quot; (banner or RMC &quot;Conference&quot; menu)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="330" y="40" width="340" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="m2" value="&quot;Move to conference&quot; dialog: pick the target conference session, add a comment, click &quot;Move&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="330" y="112" width="340" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="d5" value="Is the target conference session locked? (checkConferenceSessionLockStatus)" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="360" y="184" width="280" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="d5b" value="Remaining count &gt; 0?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="790" y="204" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="err5a" value="&quot;Target session just got locked&quot; error" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="700" y="276" width="150" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="err5b" value="&quot;Target session locked, no tasks left&quot; error" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="880" y="276" width="150" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="d1" value="Current user is presenter/administrator of the SOURCE session? (hasPermissionToUpdateOrDeleteSession)" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="360" y="294" width="280" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="err1" value="Error: &quot;No permission to move to other session&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="760" y="310" width="260" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="d2" value="Current user has &quot;add to conference&quot; permission on the TARGET conference? (checkAddToConferencePermission)" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="360" y="404" width="280" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="err2" value="Error: &quot;No permission to add to conference&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="760" y="420" width="260" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="d3" value="Selected studies still belong to the source session (no concurrent change by another user)? (isTasksBelongToSession)" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="360" y="514" width="280" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="err3" value="Error: &quot;Session list changed&quot; - query list is refreshed" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="760" y="530" width="260" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="pclass" value="getSrc2TgtTasksMap: for each selected source task, look up non-cancelled discussion task(s) for the same requested procedure (study) already on the target session. Split into srcNeedToMoveTasks (none found) and srcNeedToCombineTasks (found)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="300" y="624" width="440" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="d6" value="remainCnt &gt; 0 AND remainCnt &lt; srcNeedToMoveTasks.size()? (only the &quot;to move&quot; net-new tasks count against capacity; combine never adds a task)" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="340" y="714" width="340" height="88" as="geometry" />
+        </mxCell>
+        <mxCell id="err6" value="Error: &quot;N tasks left, but trying to add M new tasks&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="780" y="734" width="240" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="noteCapacity" value="remainCnt is null when the target session has no configured capacity limit; the check above only fires when remainCnt &gt; 0." style="text;html=1;align=center;verticalAlign=middle;fontSize=10.5;fontStyle=2;fontColor=#555555;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="300" y="806" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="labelMove" value="&quot;To move&quot; set - moveDiscussionTasks (study not yet discussed in the target session)" style="text;html=1;align=left;verticalAlign=middle;fontSize=11.5;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="20" y="846" width="480" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="labelCombine" value="&quot;To combine&quot; set - combineDiscussionTasks (study already has a task in the target)" style="text;html=1;align=left;verticalAlign=middle;fontSize=11.5;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="540" y="846" width="480" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="dmove" value="Is source task (A) completed?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="150" y="876" width="240" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="pSurvivor" value="Pick survivor: prefer the first in-progress target task for the same study (else the first, if all completed)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="540" y="876" width="480" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pCleanup" value="cleanupStaleDuplicateTargets:&amp;nbsp; For every other completed sibling: reassign its snapshot onto the survivor and unlink it (logs a warning). If an additional in-progress sibling is found (business-invariant violation), only a warning is logged - it is left untouched and simply ignored by the merge below." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="540" y="926" width="480" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="s1" value="S1 (in-progress): reassignTasks moves the task directly into the target session - no new task created, its snapshot follows automatically" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="20" y="968" width="220" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="s3" value="S3 (completed): createMultiDiscussionWorkflow creates a new discussion task in the target session; the old task&#39;s snapshot is reassigned onto the new task; the old task is unlinked from any session" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="260" y="968" width="240" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="dcombine1" value="Is the surviving target task (B) completed?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="650" y="1046" width="240" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="moveFinish" value="For every resulting task (S1 + S3): insert the conference comment; recompute status (NONE/PREPARED) from its snapshot count; set its conference-session link to the target session with that status. S1 tasks additionally have their workflow variables synced (syncTaskWorkflowVariables -&gt; updateDiscussionTask)." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="20" y="1078" width="480" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="s2as4a" value="S2a / S4a (target task B still in-progress): unlink source task A from its session; reassign snapshot A onto task B. Task B survives, now holding snapshot A (+ its own snapshot if any)." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="540" y="1138" width="230" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="dcombine2" value="Is source task (A) also completed?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="800" y="1138" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="s2b" value="S2b (B completed, A in-progress): reassignTasks moves task A into the target session; snapshot B is reassigned onto task A; task B is unlinked. Task A survives; its workflow variables are synced." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="800" y="1248" width="230" height="98" as="geometry" />
+        </mxCell>
+        <mxCell id="s4b" value="S4b (both A and B completed): unlink tasks A and B; createMultiDiscussionWorkflow creates a new task C in the target session; both snapshots are reassigned onto task C. Task C survives." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="1060" y="1248" width="230" height="98" as="geometry" />
+        </mxCell>
+        <mxCell id="combineFinish" value="Insert the conference comment on the surviving task. After every &quot;to combine&quot; task is processed, batch-recompute status (NONE/PREPARED) for all surviving tasks from their snapshot counts (updateConferenceStatuses)." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="540" y="1366" width="750" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="d7" value="Did this move consume the last remaining slot in the target session? (remainCnt &gt; 0 AND remainCnt &lt;= srcNeedToMoveTasks.size())" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="340" y="1466" width="320" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="plock" value="Lock the target conference session (lockOrUnlockSession)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="800" y="1486" width="220" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="term" value="Success/partial-success toast shown; each moved study now appears exactly once, in the target session" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="330" y="1576" width="340" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="e0" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" parent="1" source="m1" target="m2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" parent="1" source="m2" target="d5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" value="Yes" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" parent="1" source="d5" target="d5b" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" parent="1" source="d5" target="d1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" value="Yes (still locked)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" parent="1" source="d5b" target="err5a" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" value="No" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" parent="1" source="d5b" target="err5b" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="No" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" parent="1" source="d1" target="err1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" parent="1" source="d1" target="d2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="No" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" parent="1" source="d2" target="err2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" parent="1" source="d2" target="d3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="No" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" parent="1" source="d3" target="err3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" parent="1" source="d3" target="pclass" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" parent="1" source="pclass" target="d6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e15" value="Yes" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" parent="1" source="d6" target="err6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e16" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" parent="1" source="d6" target="dmove" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e17" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" parent="1" source="d6" target="pSurvivor" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e17b" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" parent="1" source="pSurvivor" target="pCleanup" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e17c" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" parent="1" source="pCleanup" target="dcombine1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="em1" value="No (in-progress)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" parent="1" source="dmove" target="s1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="em2" value="Yes (completed)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" parent="1" source="dmove" target="s3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="em3" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" parent="1" source="s1" target="moveFinish" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="em4" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" parent="1" source="s3" target="moveFinish" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ec1" value="No (in-progress)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="dcombine1" target="s2as4a" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ec2" value="Yes (completed)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="dcombine1" target="dcombine2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ec3" value="No (in-progress)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="dcombine2" target="s2b" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ec4" value="Yes (completed)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="dcombine2" target="s4b" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ec5" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.15;entryY=0;entryDx=0;entryDy=0;" parent="1" source="s2as4a" target="combineFinish" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ec6" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="s2b" target="combineFinish" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ec7" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.85;entryY=0;entryDx=0;entryDy=0;" parent="1" source="s4b" target="combineFinish" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ef1" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" parent="1" source="moveFinish" target="d7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ef2" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" parent="1" source="combineFinish" target="d7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e21" value="Yes" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="d7" target="plock" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e22" value="No" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.35;entryY=0;entryDx=0;entryDy=0;" parent="1" source="d7" target="term" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e23" value="then also succeeds" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.85;entryY=0;entryDx=0;entryDy=0;" parent="1" source="plock" target="term" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
