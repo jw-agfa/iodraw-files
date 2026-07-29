@@ -40,7 +40,7 @@
         <mxCell id="rp2" value="No: cancel/remove the discussion task entirely (workflow task is closed, not just unlinked)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="510" y="644" width="190" height="64" as="geometry" />
         </mxCell>
-        <mxCell id="rresq" value="Re-sequence the remaining discussion tasks in the session; bump the session&#39;s optimistic-lock version so other users viewing it are notified to refresh" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" parent="1" vertex="1">
+        <mxCell id="rresq" value="Re-sequence the remaining discussion tasks in the session; increase the session&#39;s optimistic-lock version so other users viewing it are notified to refresh" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="300" y="728" width="400" height="56" as="geometry" />
         </mxCell>
         <mxCell id="rterm" value="Success toast shown; the removed study no longer appears in this conference session" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" parent="1" vertex="1">
