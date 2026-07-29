@@ -83,7 +83,7 @@
           <mxGeometry x="20" y="1078" width="480" height="80" as="geometry" />
         </mxCell>
         <mxCell id="s2as4a" value="S2a / S4a (target task B still in-progress): unlink source task A from its session; reassign snapshot A onto task B. Task B survives, now holding snapshot A (+ its own snapshot if any)." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" parent="1" vertex="1">
-          <mxGeometry x="530" y="1170" width="240" height="92" as="geometry" />
+          <mxGeometry x="540" y="1158" width="230" height="94" as="geometry" />
         </mxCell>
         <mxCell id="dcombine2" value="Is source task (A) also completed?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="800" y="1150" width="230" height="80" as="geometry" />
@@ -188,12 +188,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ec5" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.15;entryY=0;entryDx=0;entryDy=0;" parent="1" source="s2as4a" target="combineFinish" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="655" y="1300" />
-              <mxPoint x="653" y="1300" />
-            </Array>
-          </mxGeometry>
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ec6" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="s2b" target="combineFinish" edge="1">
           <mxGeometry relative="1" as="geometry" />
