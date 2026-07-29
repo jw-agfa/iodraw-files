@@ -83,10 +83,10 @@
           <mxGeometry x="20" y="1078" width="480" height="80" as="geometry" />
         </mxCell>
         <mxCell id="s2as4a" value="S2a / S4a (target task B still in-progress): unlink source task A from its session; reassign snapshot A onto task B. Task B survives, now holding snapshot A (+ its own snapshot if any)." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" parent="1" vertex="1">
-          <mxGeometry x="540" y="1138" width="230" height="94" as="geometry" />
+          <mxGeometry x="540" y="1158" width="230" height="94" as="geometry" />
         </mxCell>
         <mxCell id="dcombine2" value="Is source task (A) also completed?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" parent="1" vertex="1">
-          <mxGeometry x="800" y="1138" width="230" height="80" as="geometry" />
+          <mxGeometry x="800" y="1150" width="230" height="80" as="geometry" />
         </mxCell>
         <mxCell id="s2b" value="S2b (B completed, A in-progress): reassignTasks moves task A into the target session; snapshot B is reassigned onto task A; task B is unlinked. Task A survives; its workflow variables are synced." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="800" y="1248" width="230" height="98" as="geometry" />
