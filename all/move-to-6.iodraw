@@ -104,7 +104,7 @@
           <mxGeometry x="800" y="1486" width="220" height="46" as="geometry" />
         </mxCell>
         <mxCell id="term" value="Success/partial-success toast shown; each moved study now appears exactly once, in the target session" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" parent="1" vertex="1">
-          <mxGeometry x="330" y="1680" width="340" height="56" as="geometry" />
+          <mxGeometry x="320" y="1680" width="340" height="56" as="geometry" />
         </mxCell>
         <mxCell id="e0" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;" parent="1" source="m1" target="m2" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -202,8 +202,13 @@
         <mxCell id="e21" value="Yes" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="d7" target="plock" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e22" value="No" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.35;entryY=0;entryDx=0;entryDy=0;" parent="1" source="d7" target="term" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="e22" value="No" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="d7" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="439" y="1680" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="500" y="1680" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="e23" value="then also succeeds" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;rounded=0;strokeColor=#333333;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.85;entryY=0;entryDx=0;entryDy=0;" parent="1" source="plock" target="term" edge="1">
           <mxGeometry relative="1" as="geometry" />
