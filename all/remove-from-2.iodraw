@@ -31,9 +31,6 @@
         <mxCell id="rerr3" value="Error: &quot;Study already removed&quot; - query list is refreshed" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="760" y="414" width="260" height="46" as="geometry" />
         </mxCell>
-        <mxCell id="note" value="Note: unlike Move, there is no session-locked check here, and no check on the discussion task&#39;s own edit state - removal is always allowed even from a locked session or an in-progress task." style="text;html=1;align=center;verticalAlign=middle;fontSize=11;fontStyle=2;fontColor=#555555;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="300" y="486" width="400" height="50" as="geometry" />
-        </mxCell>
         <mxCell id="rd5" value="Is the discussion task already completed?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="360" y="540" width="280" height="84" as="geometry" />
         </mxCell>
