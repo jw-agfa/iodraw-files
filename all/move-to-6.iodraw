@@ -13,7 +13,7 @@
         <mxCell id="m2" value="&quot;Move to conference&quot; dialog: pick the target conference session, add a comment, click &quot;Move&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="330" y="50" width="340" height="42" as="geometry" />
         </mxCell>
-        <mxCell id="d5" value="Is the target conference session locked? (checkConferenceSessionLockStatus)" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" parent="1" vertex="1">
+        <mxCell id="d5" value="Is the target conference session locked?&amp;nbsp;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="360" y="120" width="280" height="80" as="geometry" />
         </mxCell>
         <mxCell id="d5b" value="Remaining count &gt; 0?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" parent="1" vertex="1">
@@ -47,7 +47,7 @@
           <mxGeometry x="280" y="620" width="440" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d6" value="remainCnt &gt; 0 AND remainCnt &lt; srcNeedToMoveTasks.size()? (only the &quot;to move&quot; net-new tasks count against capacity; combine never adds a task)" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" parent="1" vertex="1">
-          <mxGeometry x="340" y="714" width="340" height="88" as="geometry" />
+          <mxGeometry x="330" y="713" width="340" height="88" as="geometry" />
         </mxCell>
         <mxCell id="err6" value="Error: &quot;N tasks left, but trying to add M new tasks&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="780" y="734" width="240" height="46" as="geometry" />
